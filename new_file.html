@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>物品收集区</title>
+		<style>
+            /*主页面建筑位置*/
+			#int{
+				align-items: center;
+				justify-content: center;
+				z-index: 1;
+				background-repeat: no-repeat;
+				background-position:50% 0%;
+				display: flex;
+			}
+			.int1{
+				width:40%;
+				height:100%;
+			}
+			/*顶层建筑*/
+			.house1{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:30.2%;
+				top: 2%;
+			}
+			.int2{
+				width: 56%;
+				height: 48%;
+				
+			}
+		    /*二*/
+			.house2{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:29%;
+				top:106%;
+			}
+			.int3{
+				width: 58%;
+				height: 48%;
+			}
+			/*三*/
+			.house3{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:30.2%;
+				top:170%;
+			}
+			.int4{
+				width: 58%;
+				height: 48%;
+			}
+			/*四*/
+            .house4{
+				z-index: 2;
+				overflow: hidden;
+				position: absolute;
+				left:29%;
+				top:290%;
+			}
+			.int5{
+				width: 58%;
+				height: 48%;
+			}
+			/*右上角标签*/
+			.main1{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:1%;
+				width:7.5%;
+				height: 15%;
+				opacity: 0.8;
+			}
+			.main2{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:10%;
+				width:7.5%;
+				height: 15%;
+				opacity: 0.8;
+			}
+			
+			.main3{
+				z-index: 2;
+				position: absolute;
+				left:63%;
+				top:19%;
+				width:7.5%;
+				height: 15%;
+				opacity: 0.8;
+			}
+
+			.back{
+				z-index: 2;
+				position:absolute;
+				left:63%;
+				top:400%; 
+			}
+			.back1{
+				width:12% ;
+				height:12%;
+			}
+			/*弹窗设置*/
+			#wb{
+				z-index: 3;
+				display: none;
+				position:absolute;
+				top:50%;
+				left:48%;
+				transform: translate(-50%,-50%);
+				width: 30%;
+				height:65%;
+				background-color: aliceblue;
+				border: 1px solid grey;
+				border-radius: 15px;
+				text-align: center;
+			}
+			#bao{
+				z-index: 3;
+				display: none;
+				position:absolute;
+				top:-30%;
+				left:15%;
+				width:200%;
+				height: 50%;
+			}
+			 /*图片的放大缩小*/
+			img:hover {
+			    animation: move .5s linear forwards;
+			}
+			 
+			 @keyframes move {
+			    0% {
+			        transform: scale(1);
+			    }
+			 
+			    100% {
+			        transform: scale(1.1);
+			    }
+			}
+			/*移动端设置*/
+			 @media screen and (max-width: 640px){
+				/*主页面建筑位置*/
+				#int{
+					align-items: center;
+					justify-content: center;
+					z-index: 1;
+					background-repeat: no-repeat;
+					background-position:50% 0%;
+					display: flex;
+				}
+				.int1{
+					width:100%;
+					height:100%;
+				}
+				/*顶层建筑*/
+				.house1{
+					z-index: 2;
+					position: absolute;
+					left:1%;
+					top: 1.5%;
+				}
+				.int2{
+					width:100%;
+					height:125%;
+					
+				}
+				/*二*/
+				.house2{
+					z-index: 2;
+					position: absolute;
+					left:1%;
+					top: 75%;
+				}
+				.int3{
+					width:100%;
+					height:125%;
+				}
+				/*三*/
+				.house3{
+					z-index: 2;
+					position: absolute;
+					left:1%;
+					top:120%;
+				}
+				.int4{
+					width:100%;
+					height:125%;
+				}
+				/*四*/
+				.house4{
+					z-index: 2;
+					position: absolute;
+					left:1%;
+					top:210%;
+				}
+				.int5{
+					width:100%;
+					height:125%;
+				}
+				/*右上角标签*/
+				.main1{
+					z-index: 2;
+					position: absolute;
+					left:85%;
+					top:0%;
+					width:16%;
+					height: 15%;
+					opacity: 0.8;
+				}
+				.main2{
+					z-index: 2;
+					position: absolute;
+					left:85%;
+					top:7%;
+					width:16%;
+					height: 15%;
+					opacity: 0.8;
+				}
+				
+				.main3{
+					z-index: 2;
+					position: absolute;
+					left:85%;
+					top:14%;
+					width:16%;
+					height: 15%;
+					opacity: 0.8;
+				}
+				.back{
+					z-index: 2;
+					position:absolute;
+					left:63%;
+					top:400%; 
+				}
+				.back1{
+					width:12% ;
+					height:12%;
+				} 
+				/*弹窗设置*/
+				#wb{
+					z-index: 3;
+					display: none;
+					position:absolute;
+					top:45%;
+					left:48%;
+					transform: translate(-50%,-50%);
+					width: 80%;
+					height:50%;
+					background-color: aliceblue;
+					border: 1px solid grey;
+					border-radius: 15px;
+					text-align: center;
+				}
+				#bao{
+					z-index: 3;
+					display: none;
+					position:absolute;
+					top:0%;
+					left:-30%;
+					width:200%;
+					height: 50%;
+				}
+				 /*图片的放大缩小*/
+				img:hover {
+				    animation: move .5s linear forwards;
+				}
+				 
+				 @keyframes move {
+				    0% {
+				        transform: scale(1);
+				    }
+				 
+				    100% {
+				        transform: scale(1.1);
+				    }
+				}
+			 }
+				 
+		</style>
+		<script type="text/javascript">
+			function show(){
+				document.getElementById("wb").style.display="block";
+			}
+			function close(){
+				document.getElementById("wb").style.display="none";
+			}
+			function showBao(){
+				document.getElementById("bao").style.display="block";
+			}
+			function closeBao(){
+				document.getElementById("bao").style.display="none";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="int">
+			<img class="int1" src="img/h6.jpg" width="100%" height="100%">
+			<div class="house1">
+				<img  class="int2" src="img/h4.png"/>
+			</div>
+			<div class="house2">
+				<img  class="int3" src="img/h3.png"/>
+			</div>
+			<div class="house3">
+				<img  class="int4" src="img/h2.png"/>
+			</div>
+			<div class="house4">
+				<img class="int5" src="img/h1.png"/>
+			</div>
+			<div class="back">
+				<a href="https://lwenxue.github.io/dianchaxm"><img  class="back1" src="img/M9.png"/></a>
+			</div>
+			<input type="image" src="img/M7.png" class="main1"/>
+			<div class="chajian" onmouseover="show()" onmouseout="close()">
+				<input type="image" src="img/M8.png" class="main2" />
+				<div id="wb" style="display: none;"><h4>帮助</h4></div>
+			</div>
+			<div class="chajian" onmouseover="showBao()" onmouseout="closeBao()">
+				<input type="image" src="img/M0.png" class="main3"/>
+				<div id="bao" style="display: none;">
+					<img class="pic" src="img/g1.png"/>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
